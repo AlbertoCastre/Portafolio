@@ -11,6 +11,7 @@
         </div>
       </div>
     </section>
+
     <!-- Filtros -->
     <section class="py-8 bg-white border-b border-gray-200">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,11 +31,11 @@
             Aplicaciones Web
           </button>
           <button 
-            @click="currentFilter = 'frontend'"
-            :class="currentFilter === 'frontend' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'"
+            @click="currentFilter = 'despliegue'"
+            :class="currentFilter === 'despliegue' ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'"
             class="px-4 py-2 rounded font-medium transition-colors duration-200"
           >
-            Frontend
+            Despliegue
           </button>
           <button 
             @click="currentFilter = 'fullstack'"
@@ -46,6 +47,7 @@
         </div>
       </div>
     </section>
+
     <!-- Grid de proyectos -->
     <section class="py-20 bg-white">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,6 +64,7 @@
             <div class="absolute top-4 right-4 px-3 py-1 bg-red-500 text-white text-sm font-bold rounded animate-heartbeat">
               EN USO
             </div>
+
             <!-- Carrusel de imágenes -->
             <div class="relative aspect-video bg-gray-100">
               <div class="relative h-full overflow-hidden">
@@ -103,10 +106,12 @@
                 ></div>
               </div>
             </div>
+
             <!-- Contenido -->
             <div class="p-8">
               <h3 class="text-2xl font-bold text-gray-900 mb-3">{{ project.title }}</h3>
               <p class="text-gray-600 mb-4 leading-relaxed">{{ project.description }}</p>
+
               <!-- Tecnologías -->
               <div class="flex flex-wrap gap-2 mb-6">
                 <span
@@ -117,6 +122,7 @@
                   {{ tech }}
                 </span>
               </div>
+
               <!-- Botón Visitar Sitio -->
               <div class="flex space-x-4">
                 <a
@@ -136,6 +142,7 @@
         </div>
       </div>
     </section>
+
     <!-- Call to action -->
     <section class="py-20 bg-gray-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -188,7 +195,7 @@ export default {
           images: [RedTalento, RedPerfil, RedCreditos],
           currentImageIndex: 0,
           demoLink: 'http://redtalento.upqroo.edu.mx', 
-          category: 'fullstack',
+          category: 'despliegue'
         },
       ],
     };
